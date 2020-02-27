@@ -14,5 +14,8 @@
   "include": [
     "client/**/*.spec.ts",
     "client/**/*.d.ts"
+  ],
+  "exclude": [
+    "**/node_modules/**", "**.d.ts"
   ]
 }
