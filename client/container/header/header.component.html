@@ -1,0 +1,14 @@
+<nz-header class="wrapper">
+    <span class="current-path">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item class="item">Genre</nz-breadcrumb-item>
+            <nz-breadcrumb-item class="item">Rap</nz-breadcrumb-item>
+        </nz-breadcrumb>
+    </span>
+    <nz-input-group [nzSuffix]="suffixTemplate" class="filter-songs-input">
+        <input type="text" nz-input placeholder="input with clear icon" />
+    </nz-input-group>
+    <ng-template #suffixTemplate><i nz-icon nz-tooltip class="ant-input-clear-icon" nzTheme="fill" nzType="close-circle"
+            *ngIf="false"></i></ng-template>
+    <nz-avatar nzIcon="user"></nz-avatar>
+</nz-header>

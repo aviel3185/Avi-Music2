@@ -1,0 +1,21 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .current-path {
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 7px;
+    background-color: #d4dde6;
+
+    .item {
+      font-weight: 500;
+    }
+  }
+
+  .filter-songs-input {
+    width: 30%;
+  }
+}

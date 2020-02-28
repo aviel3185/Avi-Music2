@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+
+  .sider {
+    height: 100vh;
+    width: 15%;
+    overflow: hidden;
+    background: #001429;
+  }
+
+  .header {
+    height: 7vh;
+    width: 85%;
+    right: 0;
+    position: absolute;
+  }
+
+  .content {
+    height: 93vh;
+    width: 85%;
+    left: 15%;
+    top: 7vh;
+    position: absolute;
+    background: whitesmoke;
+  }
+}
