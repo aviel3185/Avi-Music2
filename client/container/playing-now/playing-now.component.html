@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="title">Money Trees</div>
+    <div class="actions">
+        <button class="action">
+            <i nz-icon nzType="step-backward" nzTheme="outline"></i>
+        </button>
+        <button class="action" (click)="musicService.changeState()">
+            <i nz-icon nzType="{{musicService.play ? 'pause-circle' : 'play-circle'}}" nzTheme="outline"></i>
+        </button>
+        <button class="action">
+            <i nz-icon nzType="step-forward" nzTheme="outline"></i>
+        </button>
+    </div>
+    <div class="progress">
+        <span>0:00</span>
+        <nz-progress class="bar" [nzPercent]="10" [nzShowInfo]="false"></nz-progress>
+        <span>2:37</span>
+    </div>
+</div>

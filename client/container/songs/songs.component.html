@@ -1,1 +1,7 @@
-<p>songs works!</p>
+<div class="container">
+    <div class="songs-wrapper" *ngIf="songs?.length; else noSongs">
+    </div>
+    <ng-template class="noSongs" #noSongs>
+        <nz-empty class="empty"></nz-empty>
+    </ng-template>
+</div>

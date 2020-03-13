@@ -1,14 +1,50 @@
-.wrapper{
-    width: 100%;
-    .logo {
-        height: 32px;
-        background: rgba(255, 255, 255, 0.2);
-        margin: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-weight: 600;
-        font-size: 25px;
+.wrapper {
+  width: 100%;
+  position: relative;
+  .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+  }
+
+  .controller {
+    bottom: 0;
+    position: fixed;
+    width: 15%;
+    color: #a6adb4;
+    .actions {
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 30px;
+      .repeat,
+      .shuffle {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        &.rotate{
+          animation:spin 3s linear infinite;
+        }
+        .icon {
+          width: 25px;
+        }
       }
+    }
+    .private-mode-controller {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 15px;
+      :hover {
+        color: white;
+      }
+    }
+  }
 }
+
+@keyframes spin { 100% { transform:rotate(-360deg); } }

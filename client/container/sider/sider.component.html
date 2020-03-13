@@ -1,24 +1,35 @@
-<nz-sider class="wrapper" nzCollapsible [nzTrigger]="null">
+<div class="wrapper">
     <div class="logo">
         AviMusic
     </div>
-    <ul class="list" nz-menu nzTheme="dark" nzMode="inline">
-        <li nz-submenu nzTitle="Genres" nzIcon="user">
+    <ul class="list" nz-menu  nzTheme="dark" nzMode="inline">
+        <li nz-submenu nzTitle="Genres" nzIcon="team">
             <ul>
-                <li nz-menu-item>Rap</li>
-                <li nz-menu-item>Pop</li>
-                <li nz-menu-item>Classic</li>
+                <li nz-menu-item [routerLink]="['/', 'Genre', 'Rap']">Rap</li>
+                <li nz-menu-item [routerLink]="['/', 'Genre', 'Pop']">Pop</li>
+                <li nz-menu-item [routerLink]="['/', 'Genre', 'Techno']">Techno</li>
             </ul>
         </li>
-        <li nz-submenu nzTitle="Playlists" nzIcon="team">
+        <li nz-submenu nzTitle="Playlists" nzIcon="../../assets/playlist">
             <ul>
-                <li nz-menu-item>Team 1</li>
-                <li nz-menu-item>Team 2</li>
+                <li nz-menu-item [routerLink]="['/', 'Playlist', 'Chill']">Chill</li>
+                <li nz-menu-item [routerLink]="['/', 'Playlist', 'Solomun']">Solomun</li>
             </ul>
-        </li>
-        <li nz-menu-item>
-            <i nz-icon nzType="file"></i>
-            <span>File</span>
         </li>
     </ul>
-</nz-sider>
+    <div class="controller">
+        <div class="actions">
+            <button nz-icon class="repeat" [class.rotate]="musicService.repeat" (click)="repeatSong()">
+                <img class="icon" src="../../assets/repeat.svg">
+            </button>
+            <button class="shuffle">
+            <img class="icon" src="../../assets/shuffle.svg">
+            </button>
+ 
+        </div>
+        <div class="private-mode-controller">
+            <span>Private Listening</span>
+            <nz-switch [(ngModel)]="isPrivateListening"></nz-switch>
+        </div>
+    </div>
+</div>

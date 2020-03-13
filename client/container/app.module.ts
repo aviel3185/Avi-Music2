@@ -12,6 +12,8 @@ import en from '@angular/common/locales/en';
 import { SiderComponent } from './sider/sider.component';
 import { HeaderComponent } from './header/header.component';
 import { SongsComponent } from './songs/songs.component';
+import { SongUploadComponent } from './song-upload/song-upload.component';
+import { PlayingNowComponent } from './playing-now/playing-now.component';
 
 registerLocaleData(en);
 
@@ -20,7 +22,9 @@ registerLocaleData(en);
     AppComponent,
     SiderComponent,
     HeaderComponent,
-    SongsComponent
+    SongsComponent,
+    SongUploadComponent,
+    PlayingNowComponent
   ],
   imports: [
     BrowserModule,

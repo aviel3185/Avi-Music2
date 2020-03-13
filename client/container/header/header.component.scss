@@ -18,4 +18,18 @@
   .filter-songs-input {
     width: 30%;
   }
+
+    .volume-controller {
+      padding-left:15px;
+      display: flex;
+      width:10%;
+      .volume-slider{
+        width:80%;
+      }
+      .icon {
+        width: 25px;
+        padding-right:10px;
+        padding-top:3px;
+      }
+    }
 }

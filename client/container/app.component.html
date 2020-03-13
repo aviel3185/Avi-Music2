@@ -1,7 +1,16 @@
 <nz-layout class="container">
-  <app-header class="header"></app-header>
-  <app-sider class="sider"></app-sider>
-    <nz-content class="content">
-        <app-songs></app-songs>
+  <nz-sider [nzWidth]="'270px'">
+    <app-sider></app-sider>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <app-header></app-header>
+    </nz-header>
+    <nz-content>
+      <router-outlet></router-outlet>
     </nz-content>
-</nz-layout> 
+    <nz-footer style="height:13vh">
+      <app-playing-now style="display: block; height: 100%;"></app-playing-now>
+    </nz-footer>
+  </nz-layout>
+</nz-layout>

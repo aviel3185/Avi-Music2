@@ -1,8 +1,7 @@
 <nz-header class="wrapper">
     <span class="current-path">
         <nz-breadcrumb>
-            <nz-breadcrumb-item class="item">Genre</nz-breadcrumb-item>
-            <nz-breadcrumb-item class="item">Rap</nz-breadcrumb-item>
+            <nz-breadcrumb-item class="item" *ngFor="let name of breadCrumbs">{{name}}</nz-breadcrumb-item>
         </nz-breadcrumb>
     </span>
     <nz-input-group [nzSuffix]="suffixTemplate" class="filter-songs-input">
@@ -10,5 +9,18 @@
     </nz-input-group>
     <ng-template #suffixTemplate><i nz-icon nz-tooltip class="ant-input-clear-icon" nzTheme="fill" nzType="close-circle"
             *ngIf="false"></i></ng-template>
-    <nz-avatar nzIcon="user"></nz-avatar>
+    <div class="volume-controller">
+        <img class="icon" src="{{volumeIcon}}">
+        <nz-slider class="volume-slider" [nzMin]="0" [nzMax]="100" [(ngModel)]="volume"></nz-slider>
+    </div>
+    <button nz-button nzType="link" nz-dropdown [nzDropdownMenu]="menu4">
+        <nz-avatar nzIcon="user"></nz-avatar>
+    </button>
 </nz-header>
+<nz-dropdown-menu #menu4="nzDropdownMenu">
+    <ul nz-menu>
+        <li nz-menu-item>Manage Admins</li>
+        <li nz-menu-item>Manage Playlists</li>
+        <li nz-menu-item [routerLink]="['/', 'Song Upload']">Upload Song</li>
+    </ul>
+</nz-dropdown-menu>

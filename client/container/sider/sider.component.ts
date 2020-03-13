@@ -1,4 +1,6 @@
+import { MusicService } from './../../services/music.service';
 import { Component, OnInit } from '@angular/core';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-sider',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sider.component.scss']
 })
 export class SiderComponent implements OnInit {
+  public set isPrivateListening(value) {
+    alert(value);
+  }
 
-  constructor() { }
+  constructor(private readonly notifyService: NzMessageService, public readonly musicService: MusicService) { }
 
   ngOnInit(): void {
   }
-
+  repeatSong() {
+    this.musicService.repeatSong();
+  }
 }
